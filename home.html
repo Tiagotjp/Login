@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conectado com Sucesso</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f3f3;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="successMessage"></h1>
+
+    <script>
+        // Pegar o nome do usuário da URL
+        const params = new URLSearchParams(window.location.search);
+        const userName = params.get('user');
+
+        // Mostrar a mensagem de sucesso
+        document.getElementById('successMessage').textContent = `${userName} conectado com sucesso!`;
+    </script>
+</body>
+
+</html>
